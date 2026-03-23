@@ -9,7 +9,7 @@ const PricingContainer = () => {
   const [isMonthly, setIsMonthly] = useState(true);
 
   return (
-    <section id="pricing" className="relative z-10 py-16 md:py-20 lg:py-28">
+    <section id="pricing" className="relative overflow-hidden z-10 py-16 md:py-20 lg:py-28">
       <div className="container">
         <SectionTitle
           className="flex flex-col items-center text-center"

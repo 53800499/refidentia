@@ -16,7 +16,7 @@ interface SolutionSectionProps {
 
 const SolutionContainer = ({ solutions }: SolutionSectionProps) => {
   return (
-    <section className="bg-gradient-to-b from-gray-50 to-white py-20 lg:py-28">
+    <section className="bg-gradient-to-b overflow-hidden from-gray-50 to-white py-20 lg:py-28">
       <div className="container">
         <SectionTitle
           className="flex flex-col items-center text-center"
@@ -36,7 +36,7 @@ const SolutionContainer = ({ solutions }: SolutionSectionProps) => {
               <div
                 key={index}
                 className={[
-                  "flex flex-col gap-10 lg:gap-14  rounded-3xl bg-white border border-gray-100 shadow-sm hover:shadow-xl transition-all duration-500",
+                  "flex flex-col gap-10 lg:gap-14 rounded-3xl bg-white border border-gray-100 shadow-sm hover:shadow-xl transition-all duration-500",
                   isImageLeft ? "lg:flex-row" : "lg:flex-row-reverse"
                 ].join(" ")}>
                 {/* Design image */}
@@ -46,7 +46,7 @@ const SolutionContainer = ({ solutions }: SolutionSectionProps) => {
                   transition={{ duration: 0.8 }}
                   viewport={{ once: true }}
                   className="relative w-full lg:w-[440px] h-[310px]">
-                  <div className="absolute -inset-6 rounded-3xl" />
+                  <div className="absolute inset-0 rounded-3xl" />
 
                   <Image
                     src={item.image ? item.image : Benefit}
