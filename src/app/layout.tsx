@@ -34,7 +34,7 @@ export default function RootLayout({
         {/* <link rel="icon" href="/favicon.ico" /> */}
       </head>
       <body className={`bg-[#FCFCFC]`}>
-        <div className="isolate">
+        <div className="isolate overflow-hidden">
           <Header />
           {children}
           <Footer />

@@ -1,3 +1,4 @@
+/* eslint-disable react-hooks/set-state-in-effect */
 /**
  * eslint-disable react-hooks/set-state-in-effect
  *
@@ -53,14 +54,18 @@ const MobileNavigation = ({ data }: { data: Menu[] }) => {
   useEffect(() => {
     document.body.style.overflow = navbarShow ? "hidden" : "auto";
   }, [navbarShow]);
+const [mounted, setMounted] = useState(false);
 
+useEffect(() => {
+  setMounted(true);
+}, []);
   return (
     <div className="relative z-50 block xl:hidden">
       <button onClick={() => setNavbarShow(true)}>
         <MenuIcon />
       </button>
 
-      {typeof window !== "undefined" &&
+      {mounted &&
         createPortal(
           <>
             {/* overlay */}
@@ -85,7 +90,7 @@ const MobileNavigation = ({ data }: { data: Menu[] }) => {
                 <CloseIcon />
               </button>
 
-              {/* 👉 TON CONTENU EXISTANT (menu + auth) */}
+              {/* TON CONTENU EXISTANT (menu + auth) */}
               <ul className="flex flex-col">
                 {data.map(({ id, title, path, submenu }) => {
                   const isActive =

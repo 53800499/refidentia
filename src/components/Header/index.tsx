@@ -123,12 +123,12 @@ const Header = () => {
                 </div>
                 <Link
                   href="/signin"
-                  className="text-dark hidden px-7 py-3 text-base font-medium hover:opacity-70 md:block">
+                  className="text-dark hidden px-7 py-3 text-base font-bold hover:opacity-70 md:block">
                   Connexion
                 </Link>
                 <Button
                   asChild
-                  className="hidden h-12 justify-between gap-2.5 py-1.5 pr-1.5 pl-6 text-base tracking-base lg:flex">
+                  className="hidden h-12 mt-4 justify-between gap-2.5 py-1.5 pr-1.5 pl-6 text-base tracking-base lg:flex">
                   <Link href={"/signup"}>
                     Créer mon portefeuille
                     <ButtonArrow />
