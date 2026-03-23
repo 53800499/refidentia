@@ -237,11 +237,11 @@ export const HEADER = {
     {
       LABEL: "Accueil",
       HREF: "/"
-    },
+    },/* 
     {
       LABEL: "Fonctionnalités",
       HREF: "/fonctionnalite"
-    },
+    }, */
     {
       LABEL: "Tarification",
       HREF: "/tarification"
@@ -265,14 +265,13 @@ export const FOOTER = {
     "La solution centrale qui agrège, connecte et sécurise tous vos portefeuilles et paiements.",
   LINKS: {
     PRODUCT: [
-      { LABEL: "Fonctionnalités", HREF: "#features" },
-      { LABEL: "Tarifs", HREF: "#pricing" },
-      { LABEL: "Sécurité", HREF: "#security" }
+      { LABEL: "Fonctionnalités", HREF: "#" },
+      { LABEL: "Tarifs", HREF: "#" },
+      { LABEL: "Solution", HREF: "#" }
     ],
     COMPANY: [
-      { LABEL: "À Propos", HREF: "#about" },
-      { LABEL: "Blog", HREF: "#blog" },
-      { LABEL: "Contact", HREF: "#contact" }
+      { LABEL: "Contact", HREF: "#contact" },
+      { LABEL: "À Propos", HREF: "#about" }
     ],
     LEGAL: [
       { LABEL: "Mentions Légales", HREF: "#legal" },
@@ -280,7 +279,7 @@ export const FOOTER = {
       { LABEL: "Politique de Confidentialité", HREF: "#privacy" }
     ]
   },
-  COPYRIGHT: "© 2026 PayWallet. Tous droits réservés."
+  COPYRIGHT: "© 2026 Rivael system. Tous droits réservés."
 };
 
 // CTA Sections

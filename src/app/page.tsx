@@ -1,3 +1,4 @@
+/* eslint-disable @typescript-eslint/no-explicit-any */
 /**
  * eslint-disable @typescript-eslint/no-explicit-any
  *
@@ -78,8 +79,8 @@ export default function Home() {
       <QRCardSection items={qrItems} />
       <Testimonial />
       <Pricing />
-      <Cta />
-      <Blogs />
+      <Cta className="mb-10" />
+      {/* <Blogs /> */}
     </>
   );
 }

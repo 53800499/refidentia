@@ -8,12 +8,19 @@
 
 "use client";
 
-import Pricing from "@/components/Home/Pricing";
+import Cta from "@/components/cta";
+import FeaturesHeader from "@/components/Features/FeaturesHeader";
+import PricingContainer from "@/components/Pricing/PriceContainer";
+import { useFeatures } from "@/hooks/useFeatures";
 
 export default function Home() {
+    const { features } = useFeatures();
+  
   return (
     <>
-      <Pricing />
+      <PricingContainer />
+      <FeaturesHeader features={features} />
+      <Cta className="mb-20" />
     </>
   );
 }

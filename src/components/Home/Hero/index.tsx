@@ -53,7 +53,6 @@ export default function Hero({ sliders }: HeroProps) {
       className="relative z-10 overflow-hidden bg-white pb-16 pt-24 md:pt-32 lg:pt-40">
       <div className="container mx-auto px-6">
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
-          {" "}
           {/* TEXTE */}
           <div>
             <AnimatePresence mode="wait">

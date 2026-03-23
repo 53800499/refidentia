@@ -8,19 +8,22 @@ export const solutions: Solution[] = [
     icon: <QrCode size={22} />,
     title: "Paiements QR Instantanés",
     description:
-      "Encaissez vos clients immédiatement par QR code sans terminal électronique. Pas de problème de monnaie, paiement sécurisé et traçable."
+      "Encaissez vos clients immédiatement par QR code sans terminal électronique. Pas de problème de monnaie, paiement sécurisé et traçable.",
+    image: "/images/solution/scanne.jpg"
   },
   {
     icon: <ShieldCheck size={22} />,
     title: "Facturation EMECEF",
     description:
-      "Automatisez votre conformité légale et générez des factures normalisées en un clic. Zéro souci administratif."
+      "Automatisez votre conformité légale et générez des factures normalisées en un clic. Zéro souci administratif.",
+    image: "/images/solution/bg10.jpg"
   },
   {
     icon: <BarChart3 size={22} />,
     title: "Suivi Temps Réel & Traçabilité",
     description:
-      "Visualisez vos ventes, analysez vos données et prenez de meilleures décisions. Historique complet et fiable."
+      "Visualisez vos ventes, analysez vos données et prenez de meilleures décisions. Historique complet et fiable.",
+    image: "/images/solution/bg3.jpg"
   } /* ,
   {
     icon: <ShieldCheck size={22} />,

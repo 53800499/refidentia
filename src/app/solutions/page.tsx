@@ -10,6 +10,7 @@
 
 import Cta from "@/components/cta";
 import SolutionSection from "@/components/Home/Solution";
+import SolutionContainer from "@/components/Solution";
 import { useSolutions } from "@/hooks/useSolutions";
 import { useEffect } from "react";
 
@@ -24,8 +25,8 @@ export default function Home() {
 
   return (
     <>
-      <SolutionSection solutions={solutions} />
-      <Cta />
+      <SolutionContainer solutions={solutions} />
+      <Cta className="mb-20"/>
     </>
   );
 }
