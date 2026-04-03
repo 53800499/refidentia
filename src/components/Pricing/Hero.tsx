@@ -54,7 +54,7 @@ export default function Hero() {
   const card = pricingCards[cardIndex];
 
   return (
-    <section className="relative z-10 overflow-hidden bg-white pb-16 pt-12 md:pt-35">
+    <section className="relative z-10 overflow-hidden bg-white py-20 md:pt-35">
       <div className="container mx-auto px-6">
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center justify-center">
           {/* ================= LEFT (FIXED CONTENT) ================= */}
