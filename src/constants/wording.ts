@@ -300,10 +300,10 @@ export const HEADER = {
       ]
     }, */
     
-    {
+    /* {
       LABEL: "Contact",
       HREF: "/contact"
-    }
+    } */
   ],
   CTA_LOGIN: "Se Connecter",
   CTA_SIGNUP: "Créer un Portefeuille"
