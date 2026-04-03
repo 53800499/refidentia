@@ -72,7 +72,7 @@ const SolutionContainer = ({ solutions }: SolutionSectionProps) => {
                     delay: index * 0.15
                   }}
                   viewport={{ once: true }}
-                  className="w-full lg:max-w-xl">
+                  className="w-full lg:max-w-xl items-center">
                   <div className="group flex gap-6 p-6">
                     <div>
                       <h4 className="text-xl font-semibold text-gray-900">

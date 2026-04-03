@@ -237,11 +237,7 @@ export const HEADER = {
     {
       LABEL: "Accueil",
       HREF: "/"
-    },/* 
-    {
-      LABEL: "Fonctionnalités",
-      HREF: "/fonctionnalite"
-    }, */
+    },
     {
       LABEL: "Tarification",
       HREF: "/tarification"
@@ -250,6 +246,60 @@ export const HEADER = {
       LABEL: "Solutions",
       HREF: "/solutions"
     },
+    {
+      LABEL: "Produits",
+      SUBMENU: [
+      {
+        LABEL: "Paiements",
+        ITEMS: [
+          { LABEL: "Payments", DESCRIPTION: "Paiements en ligne", HREF: "/payments" },
+          { LABEL: "Payment Links", DESCRIPTION: "Liens de paiement", HREF: "/links" },
+          { LABEL: "Checkout", DESCRIPTION: "Formulaire de paiement", HREF: "/checkout" },
+        ],
+      },
+      {
+        LABEL: "Revenus",
+        ITEMS: [
+          { LABEL: "Billing", DESCRIPTION: "Gestion des abonnements", HREF: "/billing" },
+          { LABEL: "Invoicing", DESCRIPTION: "Facturation", HREF: "/invoicing" },
+        ],
+      },
+      {
+        LABEL: "Paiements",
+        ITEMS: [
+          { LABEL: "Payments", DESCRIPTION: "Paiements en ligne", HREF: "/payments" },
+          { LABEL: "Payment Links", DESCRIPTION: "Liens de paiement", HREF: "/links" },
+          { LABEL: "Checkout", DESCRIPTION: "Formulaire de paiement", HREF: "/checkout" },
+        ],
+      },
+      {
+        LABEL: "Revenus",
+        ITEMS: [
+          { LABEL: "Billing", DESCRIPTION: "Gestion des abonnements", HREF: "/billing" },
+          { LABEL: "Invoicing", DESCRIPTION: "Facturation", HREF: "/invoicing" },
+        ],
+      },
+    ],
+
+    },/* 
+    {
+      LABEL: "Produits",
+      SUBMENU: [
+        {
+          LABEL: "Portefeuille",
+          HREF: "/produits/portefeuille",
+        },
+        {
+          LABEL: "Paiements",
+          HREF: "/produits/paiements",
+        },
+        { 
+          LABEL: "Sécurité", 
+          HREF: "/produits/securite"
+        }
+      ]
+    }, */
+    
     {
       LABEL: "Contact",
       HREF: "/contact"
@@ -269,14 +319,14 @@ export const FOOTER = {
       { LABEL: "Tarifs", HREF: "#" },
       { LABEL: "Solution", HREF: "#" }
     ],
-    COMPANY: [
-      { LABEL: "Contact", HREF: "#contact" },
-      { LABEL: "À Propos", HREF: "#about" }
-    ],
+    COMPANY: [{ LABEL: "Contact", HREF: "#contact" }],
     LEGAL: [
-      { LABEL: "Mentions Légales", HREF: "#legal" },
+      { LABEL: "Mentions Légales", HREF: "/mentions-legales" },
       { LABEL: "CGU", HREF: "#terms" },
-      { LABEL: "Politique de Confidentialité", HREF: "#privacy" }
+      {
+        LABEL: "Politique de Confidentialité",
+        HREF: "/politique-de-confidentialite"
+      }
     ]
   },
   COPYRIGHT: "© 2026 Rivael system. Tous droits réservés."
@@ -620,3 +670,31 @@ export const NEWSLETTER = {
   SUBMIT_BUTTON: "S'inscrire",
   PRIVACY_NOTE: "Aucun spam garanti. Nous respectons votre confidentialité."
 };
+
+export const SIGNUP_OPTION = {
+  TITLE: "La façon sécurisée de payer et d'être payé.",
+  SUBTITLE: "Inscrivez-vous à REFIDENTIA",
+  DESCRIPTION:
+    "Sélectionnez le plan qui correspond le mieux à votre activité et commencez à centraliser vos paiements dès aujourd'hui."
+};
+
+export const PRICING_HERO = {
+  TITLE: "Des paiements unifiés pour faciliter la traçabilité de vos ventes",
+  SUBTITLE: " Une plateforme SaaS moderne pour gérer vos membres, paiements et activités en toute simplicité.",
+  RIGHT_HEADER: {
+    TITLE: "Quantum",
+    DESCRIPTION: "Des questions ?",
+    DISCUTE: "Discuter par chat",
+    OFFERS: {
+      TITLE: "Choisissez une offre",
+      MONTHLY: "Abonnement mensuel",
+      YEARLY: "Abonnement annuel",
+      ECONOMIC: "Économisez 22 %"
+    },
+    PAYMENT: {
+      TITLE: "Payez par",
+      METHODS: ["Carte de crédit", "PayPal", "..."]
+    },
+    
+  }
+  }

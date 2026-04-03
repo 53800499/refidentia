@@ -11,6 +11,7 @@ import Button from "../ui/button";
 import ButtonArrow from "../ui/buttonArrow";
 import { Logo, LogoWhite } from "@/lib/icons";
 import MobileNavigation from "./mobileNavigation";
+import { MoveRight } from "lucide-react";
 
 const Header = () => {
   // Navbar toggle
@@ -98,17 +99,34 @@ const Header = () => {
                             </span>
                           </p>
                           <div
-                            className={`submenu relative top-full left-0 rounded-sm bg-white transition-[top] duration-300 group-hover:opacity-100 lg:invisible lg:absolute lg:top-[110%] lg:block lg:w-[250px] lg:p-4 lg:opacity-0 lg:shadow-lg lg:group-hover:visible lg:group-hover:top-full ${
-                              openIndex === index ? "block" : "hidden"
-                            }`}>
-                            {menuItem.submenu?.map((submenuItem, index) => (
-                              <Link
-                                href={submenuItem.path!}
-                                key={index}
-                                className="text-dark hover:text-blue-500 block rounded-sm py-2.5 text-sm lg:px-3">
-                                {submenuItem.title}
-                              </Link>
-                            ))}
+                            className={`submenu absolute -left-80 top-full w-[900px] rounded-xl bg-white p-6 shadow-xl transition-all
+                              ${openIndex === index ? "block" : "hidden"}
+                              lg:group-hover:block`}>
+                            <div className="grid grid-cols-4 gap-6">
+                              {menuItem.submenu?.map((column, colIndex) => (
+                                <div key={colIndex} className="border-r border-gray-200 pr-6 last:border-none">
+                                  <h4 className="mb-3 text-sm font-semibold text-gray-500">
+                                    {column.title}
+                                  </h4>
+
+                                  <div className="space-y-3">
+                                    {column.items.map((item, i) => (
+                                      <Link
+                                        key={i}
+                                        href={item.path || "#"}
+                                        className="block rounded-md p-2">
+                                        <p className="font-medium text-blue-500  hover:text-blue-900">
+                                          {item.title}<MoveRight className="hidden hover:block"/>
+                                        </p>
+                                        <p className="text-xs text-gray-500">
+                                          {item.description}
+                                        </p>
+                                      </Link>
+                                    ))}
+                                  </div>
+                                </div>
+                              ))}
+                            </div>
                           </div>
                         </>
                       }
@@ -128,8 +146,8 @@ const Header = () => {
                 </Link>
                 <Button
                   asChild
-                  className="hidden h-12 mt-4 justify-between gap-2.5 py-1.5 pr-1.5 pl-6 text-base tracking-base lg:flex">
-                  <Link href={"/signup"}>
+                  className="hidden h-12 justify-between gap-2.5 py-1.5 pr-1.5 pl-6 text-base tracking-base lg:flex">
+                  <Link href={"/signup_option"}>
                     Créer mon portefeuille
                     <ButtonArrow />
                   </Link>

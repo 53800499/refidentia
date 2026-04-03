@@ -15,14 +15,14 @@ import { FOOTER, CTA } from "@/constants/wording";
 
 const footerData = [
   {
-    title: "Product",
+    title: "Produit",
     links: FOOTER.LINKS.PRODUCT.map(item => ({
       text: item.LABEL,
       url: item.HREF
     })),
   },
   {
-    title: "Company",
+    title: "Entrerise",
     links: FOOTER.LINKS.COMPANY.map(item => ({
       text: item.LABEL,
       url: item.HREF
