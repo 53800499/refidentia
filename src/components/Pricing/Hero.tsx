@@ -19,22 +19,29 @@ export default function Hero() {
   =============================== */
   const pricingCards = [
     {
-      name: "Starter",
+      name: "Free",
+      price: "0",
+      users: "10 utilisateurs",
+      color: "bg-gray-100 text-gray-900",
+      highlight: false
+    },
+    {
+      name: "Standard",
       price: "5 000",
       users: "10 utilisateurs",
       color: "bg-gray-100 text-gray-900",
       highlight: false
     },
     {
-      name: "Pro",
+      name: "Elite",
       price: "15 000",
       users: "50 utilisateurs",
       color: "bg-blue-600 text-white",
       highlight: true
     },
     {
-      name: "Enterprise",
-      price: "Sur mesure",
+      name: "Pro",
+      price: "35 000",
       users: "Illimité",
       color: "bg-gray-900 text-white",
       highlight: false

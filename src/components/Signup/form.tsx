@@ -1,4 +1,3 @@
-/* eslint-disable @typescript-eslint/no-explicit-any */
 /**
  * eslint-disable @typescript-eslint/no-explicit-any
  *
@@ -10,14 +9,6 @@
  *
  * @format
  */
-
-/**
- * eslint-disable @typescript-eslint/no-explicit-any
- *
- * @format
- */
-
-/** @format */
 
 "use client";
 
@@ -29,6 +20,8 @@ import * as z from "zod";
 
 import { Input, Select } from "@/components/ui";
 import Button from "@/components/ui/button";
+import PhoneInput from "react-phone-number-input";
+import "react-phone-number-input/style.css";
 
 type UserType = "personnel" | "pro";
 
@@ -40,7 +33,7 @@ const schemaPersonnelStep2 = z.object({
 const schemaPersonnelStep1 = z.object({
   firstName: z.string().nonempty("Prénom requis"),
   lastName: z.string().nonempty("Nom requis"),
-  npi: z.string().nonempty("NPI requis")
+  npi: z.string()
 });
 const schemaPersonnelStep3 = z
   .object({
@@ -70,7 +63,7 @@ type FormData = {
   phone: string;
   firstName: string;
   lastName: string;
-  npi: string;
+  npi?: string;
   businessName?: string;
   sector?: string;
   country?: string;
@@ -204,7 +197,8 @@ export const SignUpForm = ({ type = "personnel" }: { type?: UserType }) => {
                       render={({ field }) => (
                         <div>
                           <label className="block text-gray-700 text-sm mb-1">
-                            NPI <span className="text-red-500">*</span>
+                            NPI{" "}
+                            <span className="text-gray-500">(optionnel)</span>
                           </label>
                           <Input
                             {...field}
@@ -251,13 +245,18 @@ export const SignUpForm = ({ type = "personnel" }: { type?: UserType }) => {
                       render={({ field }) => (
                         <div>
                           <label className="block text-gray-700 text-sm mb-1">
-                            Téléphone <span className="text-red-500">*</span>
+                            Numéro de téléphone{" "}
+                            <span className="text-red-500">*</span>
                           </label>
-                          <Input
+
+                          <PhoneInput
                             {...field}
-                            placeholder="Entrez votre téléphone"
-                            dataState={errors.phone ? "error" : "default"}
+                            international
+                            defaultCountry="BJ"
+                            className="h-11 w-full rounded-lg border border-gray-200 bg-primary px-5 py-2.5 text-sm leading-5 tracking-sm shadow-xs outline-0 placeholder:text-gray-400 focus:border-blue-500 focus:shadow-[0_0_0_4px_rgba(70,95,255,0.12)] data-[state=error]:border-[#FB3748] sm:h-12l [&_.PhoneInputInput]:outline-none 
+             [&_.PhoneInputInput]:border-none"
                           />
+
                           {errors.phone && (
                             <p className="text-red-500 text-xs mt-1">
                               {errors.phone.message}

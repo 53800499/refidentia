@@ -100,54 +100,71 @@ export const PRICING: {
   YEARLY_LABEL: "Annuel",
   PLANS: [
     {
-      NAME: "Essentiel",
+      NAME: "Gratuit",
       PRICE_MONTHLY: "0",
       PRICE_YEARLY: "0",
-      DURATION_MONTHLY: "FCFA",
-      DURATION_YEARLY: "FCFA",
+      DURATION_MONTHLY: "mois",
+      DURATION_YEARLY: "an",
       SUBTITLE: "Parfait pour démarrer votre transformation digitale.",
       FEATURES: [
         { TEXT: "Portefeuille numérique sécurisé", STATUS: "active" },
-        { TEXT: "Paiements par QR code", STATUS: "active" },
-        { TEXT: "Jusqu'à 10 transactions/jour", STATUS: "active" },
+        { TEXT: "Jusqu'à 100 transactions/jour", STATUS: "active" },
         { TEXT: "Factures basiques", STATUS: "active" },
         { TEXT: "Support email", STATUS: "inactive" },
         { TEXT: "Analytics avancées", STATUS: "inactive" }
       ]
     },
     {
-      NAME: "Professionnel",
-      PRICE_MONTHLY: "4 999",
-      PRICE_YEARLY: "49 990",
-      DURATION_MONTHLY: "FCFA",
-      DURATION_YEARLY: "FCFA",
+      NAME: "Standard",
+      PRICE_MONTHLY: "5 000",
+      PRICE_YEARLY: "100 000",
+      DURATION_MONTHLY: "mois",
+      DURATION_YEARLY: "an",
+      SUBTITLE: "Parfait pour démarrer votre transformation digitale.",
+      FEATURES: [
+        { TEXT: "Portefeuille numérique sécurisé", STATUS: "active" },
+        { TEXT: "Paiements par QR code", STATUS: "active" },
+        { TEXT: "Jusqu'à 500 transactions/jour", STATUS: "active" },
+        { TEXT: "Factures basiques", STATUS: "active" },
+        { TEXT: "Support email", STATUS: "inactive" },
+        { TEXT: "Analytics avancées", STATUS: "inactive" }
+      ]
+    },
+    {
+      NAME: "Elite",
+      PRICE_MONTHLY: "15 000",
+      PRICE_YEARLY: "150 000",
+      DURATION_MONTHLY: "mois",
+      DURATION_YEARLY: "an",
       SUBTITLE: "Pour les commerçants en croissance avec volume élevé.",
       FEATURES: [
         { TEXT: "Portefeuille numérique sécurisé", STATUS: "active" },
         { TEXT: "Paiements illimités par QR code", STATUS: "active" },
         { TEXT: "Factures normalisées EMECEF", STATUS: "active" },
+        { TEXT: "Jusqu'à 2000 transactions/jour", STATUS: "active" },
         { TEXT: "Traçabilité complète", STATUS: "active" },
         { TEXT: "Support prioritaire 24/7", STATUS: "active" },
         { TEXT: "Analytics avancées & Rapports", STATUS: "inactive" }
       ]
     },
-    {
-      NAME: "Enterprise",
-      PRICE_MONTHLY: "Sur",
-      PRICE_YEARLY: "Mesure",
-      DURATION_MONTHLY: "",
-      DURATION_YEARLY: "",
+    /* {
+      NAME: "Pro",
+      PRICE_MONTHLY: "35 000",
+      PRICE_YEARLY: "500 000",
+      DURATION_MONTHLY: "mois",
+      DURATION_YEARLY: "an",
       SUBTITLE:
         "Solution personnalisée pour grandes entreprises et e-commerçants.",
       FEATURES: [
         { TEXT: "Portefeuille multi-devises", STATUS: "active" },
         { TEXT: "Paiements illimités", STATUS: "active" },
+        { TEXT: "Illimité transactions/jour", STATUS: "active" },
         { TEXT: "Facturation EMECEF + API intégration", STATUS: "active" },
         { TEXT: "Accès au financement facilité", STATUS: "active" },
         { TEXT: "Support dédié & Account Manager", STATUS: "active" },
         { TEXT: "Carte QR physique personnalisée", STATUS: "active" }
       ]
-    }
+    } */
   ]
 };
 
